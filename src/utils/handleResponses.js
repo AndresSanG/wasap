@@ -1,5 +1,5 @@
 // EXIto
-const success = ({status,data,message,res}) => {
+const success = ({res,status,message,data}) => {
     res.status(status).json({
         error:false,
         status:status,

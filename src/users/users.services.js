@@ -5,9 +5,9 @@ const getAllUsers = (req,res) => {
     .then((data) => {
         responseHandlers.success({
             res,
-            ststus:200,
+            status:200,
+            message:'all users in database',
             data,
-            message:'all users in database'
         })
     })
     .catch(error => {
@@ -55,7 +55,7 @@ const postNewUser = (req,res) => {
     .then((data) => {
         responseHandlers.success({
             res,
-            ststus:201,
+            status:201,
             data,
             message:'you created new user'
         })
@@ -79,7 +79,7 @@ const deleteUserId = (req,res) =>{
             responseHandlers.success({
                 res,
                 data,
-                status:204,
+                status:200,
                 message: 'deleted user'
             })
         }else{

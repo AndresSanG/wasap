@@ -3,6 +3,7 @@ const initModels = require('./models/initModels')
 const db = require('./utils/database')
 const responseHandlers = require('./utils/handleResponses')
 const usersRouter = require('./users/users.router')
+const authRouter = require('./auth/auth.router')
 const app = express()
 
 app.use(express.json())
@@ -28,6 +29,7 @@ app.get('/',(req,res)=>{
     })
 })
 app.use('/api/v1', usersRouter)
+app.use('/api/v1/auth',authRouter)
 // este al final
 app.use('*',(req,res)=>{
     responseHandlers.error({

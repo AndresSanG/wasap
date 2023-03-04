@@ -31,7 +31,7 @@ const Users = db.define('users', {
         defaultValue:true
     },
     phone:{
-        type:DataTypes.BIGINT,
+        type:DataTypes.STRING,
         allowNull:false,
         unique:true
     }
